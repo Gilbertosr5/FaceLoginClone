@@ -11,6 +11,9 @@
         <!-- Bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+        <!-- FontAwesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
@@ -19,34 +22,49 @@
     </head>
     <body>
         <div class="main">
-            <div class="container-lg login-area mt-5">
+            <div class="container-lg login-area mt-2">
+                <div class="logo"><img src="img/logo.svg"></div>
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="logo"><img src="img/logo.svg"></div>
                         <div class="login-cards">
                             <h5>Logins Recentes</h5>
                             <p>Clique na sua foto ou adicione uma conta.</p>
                             <div class="cards">
-
+                                <div class="card">
+                                    <img src="img/perfil/perfil1.jpg" alt="Username">
+                                    <div class="card-name">
+                                        Patricia
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="img/perfil/perfil2.jpg" alt="Username">
+                                    <div class="card-name">
+                                        Veronica
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="img/perfil/perfil3.jpg" alt="Username">
+                                    <div class="card-name">
+                                        Maria
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="container">
-                            <form class="login-form">
-                                <div class="mb-3">
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email ou Telefone">
-                                </div>
-                                <div class="mb-3">
-                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
-                                </div>
-                                <button type="submit" class="btn btn-primary w-100 fw-bold">Entrar</button>
-                                <div class="forgot mt-2"><a href="#" class="text-center">Esqueceu a senha?</a></div>
-                                <hr class="my-3">
-                                <div class="text-center"><button type="button" class="btn w-50 fw-bold text-white" style="background-color: #42b72a; font-size: 17px;" data-bs-toggle="modal" data-bs-target="#cadastroModal">Criar nova conta</button></div>
-                            </form>
-                            <p class="celebridade mt-3"><a href="#">Criar uma Página</a> para uma celebridade, uma marca ou uma empresa.</p>
-                        </div>
+                    <div class="col-md-6" id="before-form">
+                        <form class="login-form w-75">
+                            <div class="mb-3">
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email ou Telefone">
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 fw-bold">Entrar</button>
+                            <div class="forgot mt-2"><a href="#" class="text-center">Esqueceu a senha?</a></div>
+                            <hr class="my-3">
+                            <div class="text-center"><button type="button" class="btn w-50 fw-bold text-white" style="background-color: #42b72a; font-size: 17px;" data-bs-toggle="modal" data-bs-target="#cadastroModal">Criar nova conta</button></div>
+                        </form>
+                        <p class="celebridade mt-3 w-75"><a href="#">Criar uma Página</a> para uma celebridade, uma marca ou uma empresa.</p>
                     </div>
                 </div>
             </div>
@@ -69,7 +87,8 @@
                         <input type="email" class="form-control my-1" id="cadastroEmailForm" placeholder="Celular ou Email">
                         <input type="password" class="form-control my-1" id="cadastroPasswordForm" placeholder="Senha">
                     </div>
-                    <div class="row mx-2 mb-1">
+                    <p class="modalTuto mb-0 ms-4">Data de nascimento <i class="fa fa-question-circle" aria-hidden="true"></i></p>
+                    <div class="row mx-2 mb-2">
                         <div class="col-4">
                             <select class="form-select">                              
                                 <option value="1">1</option>
@@ -124,6 +143,30 @@
                         <div class="col-4">
                             <input type="text" class="form-control" id="brithYear" placeholder="Ano">
                         </div>
+                    </div>
+                    <p class="modalTuto mb-0 ms-4 mt-2">Genero <i class="fa fa-question-circle" aria-hidden="true"></i></p>
+                    <div class="row mx-2 mb-2">
+                        <div class="checks d-flex justify-content-around">
+                            <div class="form-check form-check-inline border rounded">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="inlineRadio1">Masculino</label>
+                            </div>
+                            <div class="form-check form-check-inline border rounded">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2">Feminino</label>
+                            </div>
+                            <div class="form-check form-check-inline border rounded">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                <label class="form-check-label" for="inlineRadio3">Personlizado</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modalFooter">
+                        <p class="terms mt-2 w-75">
+                            Ao clicar em Cadastre-se, você concorda com nossos <a href="#">Termos</a>, <a href="#">Política de Dados</a> e <a href="#">Política de Cookies</a>. Você poderá receber notificações por SMS e cancelar isso quando quiser.
+                        </p>
+                        <button type="button" class="btn w-75 fw-bold text-white mt-1 mb-3" style="background-color: #42b72a; font-size: 17px;" data-bs-toggle="modal" data-bs-target="#cadastroModal">Cadastre-se</button>
                     </div>
                 </div>
             </div>
